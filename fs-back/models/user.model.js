@@ -22,7 +22,19 @@ const userSchema = new Schema(
     },
     addresses: [
       {
-        type: String,
+        street: {
+          type: String,
+          required: true,
+        },
+        city: {
+          type: String,
+          required: true,
+        },
+        zipCode: {
+          type: Number,
+          minlength: 5,
+          required: true,
+        },
       },
     ],
   },

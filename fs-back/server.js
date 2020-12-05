@@ -27,8 +27,11 @@ connection.once("open", () => {
   console.log("Connected...");
 });
 
+const userRouter = require("./routes/users");
 // const inventoryRouter = require("This is where the routes for the inventory will go");
 // const orderRouter = require("This is where the routes for the orders will go");
+
+app.use("/users", userRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
