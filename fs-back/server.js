@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 require("dotenv").config();
 
@@ -26,8 +27,8 @@ connection.once("open", () => {
   console.log("Connected...");
 });
 
-const inventoryRouter = require("This is where the routes for the inventory will go");
-const orderRouter = require("This is where the routes for the orders will go");
+// const inventoryRouter = require("This is where the routes for the inventory will go");
+// const orderRouter = require("This is where the routes for the orders will go");
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
