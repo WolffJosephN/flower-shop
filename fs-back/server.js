@@ -28,10 +28,12 @@ connection.once("open", () => {
 });
 
 const userRouter = require("./routes/users");
+const flowerRouter = require("./routes/flowers");
 // const inventoryRouter = require("This is where the routes for the inventory will go");
 // const orderRouter = require("This is where the routes for the orders will go");
 
 app.use("/users", userRouter);
+app.use("/flowers", flowerRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
